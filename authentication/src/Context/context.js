@@ -1,5 +1,5 @@
-import { createContext, useContext } from "react";
-
+import { createContext, useContext, useReducer } from "react";
+import { AuthReducer,initialState } from "./reducer";
 const AuthStateContext = createContext();
 const AuthDispatchContext = createContext();
 

@@ -1,19 +1,27 @@
-import { BrowserRouter as Router, Route,Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import AppRoutes from "./Components/AppRoute"
 import routes from "./Config/routes"
-import Login from "./Pages/Login/Login"
+import { AuthProvider, useAuthState } from "./Context"
+
 
 const App = () => {
+
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
         <Routes>
-            {
-              routes.map(route=>(
-                <Route key={route.path} path={route.path} element={route.component}/>
-              ))
+          {
+            routes.map((route, index) => {
+              console.log(route);
+              return (
+                <Route key={index} path={route.path} element={route.component} isPrivate={route.isPrivate} />
+              )
             }
-            {/* <Route path="/" element={<Login/>} /> */}
+            )
+          }
         </Routes>
-    </Router>
+      </Router>
+    </AuthProvider>
   )
 }
 
