@@ -4,6 +4,7 @@ import styles from '../Dashboard/dashboard.module.css'
 const Dashboard = () => {
     const dispatch = useAuthDispatch();
     const userdetail = useAuthState(); 
+    console.log("userdetail>>>",userdetail);
      const navigate = useNavigate();
     const handlelogout = () => {
         logout(dispatch);

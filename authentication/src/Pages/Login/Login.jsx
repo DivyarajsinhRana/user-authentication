@@ -2,7 +2,7 @@ import styles from '../Login/login.module.css';
 import { loginUser, useAuthState, useAuthDispatch } from '../../Context' 
 import { useNavigate } from 'react-router-dom';
 import {  useState } from 'react';
-const Login = (props) => {
+const Login = () => {
   const navigate = useNavigate();
   const dispatch = useAuthDispatch()
   const [email, setEmail] = useState('')
@@ -12,6 +12,8 @@ const Login = (props) => {
     e.preventDefault();
   try {
     let response = await loginUser(dispatch, {email,password}) //loginUser action makes the request and handles all the neccessary state changes
+    console.log("response>>>",response)
+    console.log(!response.user);
     if (!response.user) return
     navigate('/dashboard') //navigate to dashboard on success
 } catch (error) {

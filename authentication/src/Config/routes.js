@@ -2,7 +2,6 @@ import Login from '../Pages/Login/Login'
 import Dashboard from '../Pages/Dashboard/Dashboard'
 import PageNotFound from '../Pages/NotFound/PageNotFound'
 
-
 const routes =[
     {
       path:'/login',           

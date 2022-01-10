@@ -1,5 +1,8 @@
 import { createContext, useContext, useReducer } from "react";
 import { AuthReducer,initialState } from "./reducer";
+
+// creating context 
+
 const AuthStateContext = createContext();
 const AuthDispatchContext = createContext();
 
