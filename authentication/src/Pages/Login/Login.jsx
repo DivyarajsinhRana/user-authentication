@@ -16,13 +16,16 @@ const Login = () => {
     console.log("response>>>",response)
     console.log(!response.user);
     if (!response.user) return
-    navigate('/dashboard/*') //navigate to dashboard on success
+    navigate('/dashboard') //navigate to dashboard on success
 } catch (error) {
     console.log(error)
 }
  }
  useEffect(() => {
-    
+        if(localStorage.getItem("currentUser"))
+        {
+            navigate('/dashboard');
+        }
  }, [])
     return (
       <div className="container">
