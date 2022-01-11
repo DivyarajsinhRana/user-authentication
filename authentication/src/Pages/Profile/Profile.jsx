@@ -1,50 +1,19 @@
-import React from 'react'
+import { useAuthState } from "../../Context";
+import Form from "./Form";
+
+
 
 const Profile = () => {
     console.log("Hello");
+    // const data = localStorage.getItem("currentUser");
+    const user = useAuthState();
+    console.log(user.userDetails.email);
     return (
         <>
-        <div>
-        <h1>List of employees</h1>
-    </div>
-  <div>
-    <table className="table table-striped table-dark">
-      <thead>
-        <tr>
-          <th scope="col">No.</th>
-          <th scope="col">Name</th>
-          <th scope="col">Designation</th>
-          <th scope="col">Email id</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>khushali patel</td>
-          <td>Developer</td>
-          <td>abc@gmail.com</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Arwa Guriwala</td>
-          <td>Developer</td>
-          <td>abc@gmail.com</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Divyaraj Rana</td>
-          <td>Developer</td>
-          <td>abc@gmail.com</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Avani Talati</td>
-          <td>Developer</td>
-          <td>abc@gmail.com</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+            <div>
+            <p>Welcome {user.userDetails.email}</p>
+            <Form/>
+            </div>
         </>
             
            

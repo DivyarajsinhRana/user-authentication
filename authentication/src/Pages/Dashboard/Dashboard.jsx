@@ -1,12 +1,10 @@
 import { useNavigate,Route,Routes, useParams, BrowserRouter } from 'react-router-dom';
 import { useAuthDispatch, useAuthState, logout } from '../../Context'
-import styles from '../Dashboard/dashboard.module.css'
 import Navbar from '../Navbar';
-import { useEffect } from 'react';
+
 import Sidebar from '../Sidebar/Sidebar';
-import Profile from '../Profile/Profile';
-import About from '../About/About';
-import Main from '../Main/Main';
+import Table from './Table';
+
 
 const Dashboard = ({children}) => {
     console.log(children)
@@ -30,13 +28,8 @@ const Dashboard = ({children}) => {
                 <Sidebar data={userdetail} />
                     </div>
                     <div className='col-10'>
-                        <h1>hi</h1>
+                        <Table/>
                         {children}
-                       {/* <Routes>
-                
-                  <Route path="/dashboard/Profile" element={<Profile/>}/>
-                  <Route path="/dashboard/About" element={<About/>}/>
-                    </Routes>   */}
                     </div>
                 <div>
             </div>

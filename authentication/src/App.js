@@ -5,7 +5,7 @@ import routes from "./Config/routes"
 import { AuthProvider, logout, useAuthDispatch, useAuthState } from "./Context"
 import About from "./Pages/About/About"
 import Dashboard from "./Pages/Dashboard/Dashboard"
-import DashboardRoute from "./Pages/Dashboard/DashboardRoute"
+
 
 import Login from "./Pages/Login/Login"
 import Navbar from "./Pages/Navbar"
@@ -36,7 +36,9 @@ const App = () => {
         </AppRoutes>
       } 
       >
-        
+         {/* <Route path="/*" element={<AppRoutes isPrivate={true}>
+        <PageNotFound />
+      </AppRoutes>} /> */}
         </Route>
      </Routes>
       {/* <Route path='/profile' element={<Profile/>}/>
@@ -52,9 +54,7 @@ const App = () => {
         </AppRoutes>
       } /> */}
 
-      {/* <Route path="/*" element={<AppRoutes isPrivate={true}>
-        <PageNotFound />
-      </AppRoutes>} /> */}
+     
       {/* {
             routes.map((route, index) => {
               console.log(route.path)
