@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import React from 'react'
-=======
+
+
 
 import { Link } from 'react-router-dom'
->>>>>>> 262159d38cd1603a2ef75c4fccb0299dab49c2d7
+
 
 const Navbar = ({handleLogout}) => {
     return (

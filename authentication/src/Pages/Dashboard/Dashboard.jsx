@@ -19,24 +19,28 @@ const Dashboard = () => {
     return (
         <>
             <div>
-                    <Navbar handleLogout={handlelogout} />
-                <div>
-                <Sidebar />
-                    <div>
-                      <Main/>
+             <Navbar handleLogout={handlelogout} />
+                <div className="row">
+                    <div className='col-2'>
+                <Sidebar data={userdetail} />
                     </div>
-                </div>
-            </div>
+                    <div className='col-10'>
+                      <Main/>
 
-            <div style={{ padding: 10 }}>
+                    </div>
+                <div>
+            </div>
+            </div>
+        </div>
+            {/* <div style={{ padding: 10 }}>
                 <div className={styles.dashboardPage} >
                     <h1>
                         Dashboard
                     </h1>
-                    {/* <button className={styles.logoutBtn} onClick={handlelogout} >Logout</button> */}
+                    
                 </div>
                 <p>Welcome {userdetail.user.email}</p>
-            </div>
+            </div> */}
         </>
     )
 }
