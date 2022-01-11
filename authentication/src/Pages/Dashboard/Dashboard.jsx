@@ -1,13 +1,13 @@
 import { useNavigate,Route,Routes, useParams, BrowserRouter } from 'react-router-dom';
 import { useAuthDispatch, useAuthState, logout } from '../../Context'
 import Navbar from '../Navbar';
-
 import Sidebar from '../Sidebar/Sidebar';
+import Linechart from './Chart';
 import Table from './Table';
 
 
 const Dashboard = ({children}) => {
-    console.log(children)
+    // console.log(children)
     const dispatch = useAuthDispatch();
     const userdetail = useAuthState();
     // console.log("userdetail>>>", userdetail);
@@ -16,9 +16,6 @@ const Dashboard = ({children}) => {
         logout(dispatch);
         navigate("/login");
     }
-    
-
-    
     return (
         <>
         <>
@@ -27,7 +24,10 @@ const Dashboard = ({children}) => {
                     <div className='col-2'>
                 <Sidebar data={userdetail} />
                     </div>
-                    <div className='col-10'>
+                    <div className='d-inline-block col-10'>
+                        <div className="mx-auto mt-3  w-50 h-auto">
+                        <Linechart/>
+                        </div>
                         <Table/>
                         {children}
                     </div>

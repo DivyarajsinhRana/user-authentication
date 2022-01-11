@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Form = () => {
     return (
@@ -29,8 +28,8 @@ const Form = () => {
   </div>
   <div className="col-md-4">
     <label htmlFor="inputState" className="form-label">State</label>
-    <select id="inputState" className="form-select">
-      <option defaultValue={selected}>Choose...</option>
+    <select id="inputState" className="form-select" defaultValue="Choose">
+      <option  value="Choose">Choose...</option>
       <option>...</option>
     </select>
   </div>

@@ -4,10 +4,10 @@ import Form from "./Form";
 
 
 const Profile = () => {
-    console.log("Hello");
+    
     // const data = localStorage.getItem("currentUser");
     const user = useAuthState();
-    console.log(user.userDetails.email);
+    // console.log(user.userDetails.email);
     return (
         <>
             <div>
