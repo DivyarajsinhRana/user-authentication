@@ -6,11 +6,11 @@ const Sidebar = ({data}) => {
     return (
         <>
         <div   className={styles.sidebar}>
-            <p className='text-success'>  Welcome {data.user.email} </p>
+            {/* <p className='text-success'>  Welcome {data.user.email} </p> */}
                 <ul>
                    <li className={styles.listitem} ><Link to="/dashboard" className={styles.link}>Dashboard</Link></li>
-                   <li className={styles.listitem}><Link to="/profile"  className={styles.link}>Profile</Link></li>
-                   <li className={styles.listitem}><Link to="/about" className={styles.link}>About</Link></li>
+                   <li className={styles.listitem}><Link to="Profile"  className={styles.link}>Profile</Link></li>
+                   <li className={styles.listitem}><Link to="About" className={styles.link}>About</Link></li>
                </ul>
         </div>
          

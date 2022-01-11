@@ -7,7 +7,7 @@ import Profile from '../Profile/Profile'
 const Main = () => {
     return (
         <>
-            main conponent
+           
         </>
     )
 }

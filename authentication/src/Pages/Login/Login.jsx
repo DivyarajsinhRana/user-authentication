@@ -5,7 +5,7 @@ import {  useState,useEffect } from 'react';
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useAuthDispatch()
-  console.log(dispatch);
+//   console.log(dispatch);
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const { loading, errorMessage } = useAuthState()  
@@ -16,7 +16,7 @@ const Login = () => {
     console.log("response>>>",response)
     console.log(!response.user);
     if (!response.user) return
-    navigate('/dashboard') //navigate to dashboard on success
+    navigate('/dashboard/*') //navigate to dashboard on success
 } catch (error) {
     console.log(error)
 }

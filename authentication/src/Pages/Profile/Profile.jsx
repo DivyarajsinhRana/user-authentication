@@ -1,10 +1,13 @@
 import React from 'react'
 
 const Profile = () => {
+    console.log("Hello");
     return (
-        <div>
-            Profile page
-        </div>
+       <div>
+           Profile page
+       </div>
+            
+           
     )
 }
 

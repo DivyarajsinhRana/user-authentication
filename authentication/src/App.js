@@ -1,29 +1,47 @@
 import { useState } from "react"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom"
 import AppRoutes from "./Components/AppRoute"
 import routes from "./Config/routes"
-import { AuthProvider, useAuthState } from "./Context"
+import { AuthProvider, logout, useAuthDispatch, useAuthState } from "./Context"
 import About from "./Pages/About/About"
 import Dashboard from "./Pages/Dashboard/Dashboard"
+import DashboardRoute from "./Pages/Dashboard/DashboardRoute"
 
 import Login from "./Pages/Login/Login"
+import Navbar from "./Pages/Navbar"
 
 import PageNotFound from "./Pages/NotFound/PageNotFound"
 import Profile from "./Pages/Profile/Profile"
+import Sidebar from "./Pages/Sidebar/Sidebar"
 
 const App = () => {
   // const userDetails= useAuthState();
   // console.log(userDetails);
+ 
+  
   return (
-    <Routes>
+    <>
+    
+  <Routes>
       <Route path="/" element={<Login />} />
-      <Route path="/dashboard" element={
+      <Route path="/login" element={<Login />} />
+      <Route path="/dashboard/*" element={
         <AppRoutes isPrivate={true}>
-          <Dashboard /> 
+          <Dashboard>
+            <Routes>
+          <Route path="Profile" element={<Profile/>}/>
+          <Route path="About" element={<About/>}/>
+            </Routes>
+            </Dashboard>
         </AppRoutes>
-      } />
-      <Route path='/profile' element={<Profile/>}/>
-      <Route path='/about' element={<About/>}/>
+      } 
+      >
+         
+        </Route>
+         
+     </Routes>
+      {/* <Route path='/profile' element={<Profile/>}/>
+      <Route path='/about' element={<About/>}/> */}
       {/* <Route path="/profile" element={
         <AppRoutes isPrivate={true}>
           <Profile /> 
@@ -53,7 +71,8 @@ const App = () => {
             )
           } */}
 
-    </Routes>
+   
+    </>
 
 
   )
