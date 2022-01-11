@@ -4,8 +4,9 @@ import AppRoutes from "./Components/AppRoute"
 import routes from "./Config/routes"
 import { AuthProvider, useAuthState } from "./Context"
 import Dashboard from "./Pages/Dashboard/Dashboard"
+
 import Login from "./Pages/Login/Login"
-import Navbar from "./Pages/Navbar"
+
 import PageNotFound from "./Pages/NotFound/PageNotFound"
 
 const App = () => {
@@ -13,16 +14,16 @@ const App = () => {
   // console.log(userDetails);
   return (
     <Routes>
-      <Route path="/" element={<Navbar />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
+    
       <Route path="/dashboard" element={
         <AppRoutes isPrivate={true}>
-          <Dashboard />
+          <Dashboard /> 
         </AppRoutes>
       } />
-      <Route path="/*" element={<AppRoutes isPrivate={true}>
+      {/* <Route path="/*" element={<AppRoutes isPrivate={true}>
         <PageNotFound />
-      </AppRoutes>} />
+      </AppRoutes>} /> */}
       {/* {
             routes.map((route, index) => {
               console.log(route.path)

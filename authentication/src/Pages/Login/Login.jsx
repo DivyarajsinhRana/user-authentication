@@ -1,7 +1,7 @@
 import styles from '../Login/login.module.css';
 import { loginUser, useAuthState, useAuthDispatch } from '../../Context' 
 import { useNavigate } from 'react-router-dom';
-import {  useState } from 'react';
+import {  useState,useEffect } from 'react';
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useAuthDispatch()
@@ -20,6 +20,9 @@ const Login = () => {
     console.log(error)
 }
  }
+ useEffect(() => {
+    
+ }, [])
     return (
       <div className={styles.container}>
             <div className={{ width: 200 }}>
