@@ -2,8 +2,7 @@ import { useNavigate,Route,Routes, useParams, BrowserRouter } from 'react-router
 import { useAuthDispatch, useAuthState, logout } from '../../Context'
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar/Sidebar';
-import Linechart from './Chart';
-import Table from './Table';
+
 
 
 const Dashboard = ({children}) => {
@@ -25,10 +24,10 @@ const Dashboard = ({children}) => {
                 <Sidebar data={userdetail} />
                     </div>
                     <div className='d-inline-block col-10'>
-                        <div className="mx-auto mt-3  w-50 h-auto">
+                        {/* <div className="mx-auto mt-3  w-50 h-auto">
                         <Linechart/>
                         </div>
-                        <Table/>
+                        <Table/> */}
                         {children}
                     </div>
                 <div>

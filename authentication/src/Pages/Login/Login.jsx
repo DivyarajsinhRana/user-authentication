@@ -1,4 +1,4 @@
-import styles from '../Login/login.module.css';
+import  '../Login/login.css';
 import { loginUser, useAuthState, useAuthDispatch } from '../../Context' 
 import { useNavigate } from 'react-router-dom';
 import {  useState,useEffect } from 'react';
@@ -25,19 +25,19 @@ const Login = () => {
     
  }, [])
     return (
-      <div className={styles.container}>
+      <div className="container">
             <div className={{ width: 200 }}>
                 <h1>Login Page</h1>
                 {
-                    errorMessage ? <p className={styles.error}>{errorMessage}</p> : null
+                    errorMessage ? <p className="error">{errorMessage}</p> : null
                 }
                 <form >
-                    <div className={styles.loginForm}>
-                        <div className={styles.loginFormItem}>
+                    <div className="loginForm">
+                        <div className="loginFormItem">
                             <label htmlFor="email">Username</label>
                             <input type="text" id='email' value={email} onChange={(e) => setEmail(e.target.value)} disabled={loading} />
                         </div>
-                        <div className={styles.loginFormItem}>
+                        <div className="loginFormItem">
                             <label htmlFor="password">Password</label>
                             <input type="password" id='password' value={password} onChange={(e) => setPassword(e.target.value)} disabled={loading} />
                         </div>

@@ -5,6 +5,7 @@ import routes from "./Config/routes"
 import { AuthProvider, logout, useAuthDispatch, useAuthState } from "./Context"
 import About from "./Pages/About/About"
 import Dashboard from "./Pages/Dashboard/Dashboard"
+import DashboardContent from "./Pages/Dashboard/DashboardContent"
 
 
 import Login from "./Pages/Login/Login"
@@ -31,6 +32,7 @@ const App = () => {
             <Routes>
           <Route path="Profile" element={<Profile/>}/>
           <Route path="About" element={<About/>}/>
+          <Route path="" element={<DashboardContent/>}/>
             </Routes>
             </Dashboard>
         </AppRoutes>
