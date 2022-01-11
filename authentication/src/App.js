@@ -36,9 +36,8 @@ const App = () => {
         </AppRoutes>
       } 
       >
-         
+        
         </Route>
-         
      </Routes>
       {/* <Route path='/profile' element={<Profile/>}/>
       <Route path='/about' element={<About/>}/> */}
