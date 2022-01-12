@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addtocart, IncreaseQuantity, stockDec } from "../../Components/Auth/_Redux/authaction";
-
+import './robot.css'
 
 const Robotcard = ({item,index}) => {
     const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const Robotcard = ({item,index}) => {
         }
     }
     return (
-        <div className="card" style={{width: "18rem"}}>
+        <div className="card">
         <img className="card-img-top" src={item.image} alt="Card image cap" />
             <div className="card-body">
                 <h5 className="card-title"><strong>Name</strong>:{item.name}</h5>
@@ -30,7 +30,7 @@ const Robotcard = ({item,index}) => {
                 <p className="card-text"><strong>Price</strong>:{item.price}</p>
                 <p className="card-text"><strong>Stock</strong>:{item.stock}</p>
                 <p className="card-text"><strong>createdAt</strong>:{item.createdAt}</p>
-               <button className="btn btn-success" onClick={() =>handleClick(item,item.name)} id={index}>{btnTxt}</button>
+               <button className="btn btn-outline-secondary" onClick={() =>handleClick(item,item.name)} id={index}>{btnTxt}</button>
             </div>
     </div>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
     return (
-        <dl className="row">
+        <dl className="row m-5 w-100">
             <dt className="col-sm-3">Description lists</dt>
             <dd className="col-sm-9">A description list is perfect for defining terms.</dd>
 

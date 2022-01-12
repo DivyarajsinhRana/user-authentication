@@ -38,8 +38,8 @@ const Form = () => {
     <input type="text" className="form-control" id="inputZip"/>
   </div>
  
-  <div className="col-12">
-    <button type="submit" className="btn btn-primary">Edit</button>
+  <div className="col-12 text-center">
+    <button type="submit" className="btn btn-outline-secondary">Edit</button>
   </div>
 </form>
     )

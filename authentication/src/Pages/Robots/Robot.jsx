@@ -5,6 +5,7 @@ import moment from 'moment';
 import Filter from '../Filter/Filter'
 import Robotcard from './Robotcard'
 import Cart from "../Cart/Cart";
+import './robot.css'
 const Robot = () => {
 const dispatch = useDispatch();
 useEffect(()=>{
@@ -34,12 +35,12 @@ const filterRobots = robotdata && robotdata.filter((item) =>
          <div className="row mt-3">
          <Filter length={length} handleChange={handleChange} />
          </div>   
-         <div className="row mt-2">
+         <div className="robot mt-2">
          {
                 allrobots && allrobots.map((item, index) => {
                     // console.log("item>>>",item)
                     return (
-                        <div className='col-4 mt-3 gx-5' key={index}>
+                        <div className=' mt-3 gx-5' key={index}>
                             <Robotcard index={index} item={item} />
                         </div>
                     )
