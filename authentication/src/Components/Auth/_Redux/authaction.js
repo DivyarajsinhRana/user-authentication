@@ -1,5 +1,5 @@
-import axios from "axios"
-import { GET_ROBOTS } from "./_authcrud"
+import axios from 'axios'
+import { GET_ROBOTS } from "./authcrud"
 
 export const getrobots = (robots) => {
     return ({
