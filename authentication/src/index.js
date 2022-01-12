@@ -7,14 +7,18 @@ import { AuthProvider } from './Context';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import { Provider } from 'react-redux';
+import { store } from './Redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
     <AuthProvider>
       <Router>
         <App />
       </Router>
     </AuthProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
