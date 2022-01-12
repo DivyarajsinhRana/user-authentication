@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .formContainer {
     width: 200px;
@@ -23,3 +24,5 @@
     flex-direction: column;
     margin-bottom: 10px;
   }
+
+  

@@ -44,8 +44,11 @@ const Login = () => {
                             <label htmlFor="password">Password</label>
                             <input type="password" id='password' value={password} onChange={(e) => setPassword(e.target.value)} disabled={loading} />
                         </div>
-                    </div>
+                        <div className='d-flex justify-content-center'>
+
                     <button onClick={handleLogin} disabled={loading}>login</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

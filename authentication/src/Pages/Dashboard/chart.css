@@ -1,0 +1,21 @@
+@media only screen and (min-width: 0px) and (max-width : 576px){
+    .chart{
+        width: 100%;
+        height: auto;
+        margin: 10px 30px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width : 992px){
+    .chart{
+        width: 100%;
+        height: auto;
+        margin: 10px 70px;
+    }
+}
+@media only screen and  (min-width : 992px){
+    .chart{
+        height: auto;
+        width: 75%;
+        margin: 0 auto;
+    }
+}

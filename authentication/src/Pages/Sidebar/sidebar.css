@@ -1,6 +1,6 @@
 .sidebar{
     /* width: 250px; */
-    height:100% ;
+  
     background-color: #2f4050;
     color: white;
 }
@@ -11,4 +11,15 @@
 
 .listitem{
     list-style: none;
+}
+
+@media only screen and (min-width: 0px) and (max-width : 992px){
+    .sidebar{
+        display: none;
+    }
+}
+@media only screen and  (min-width : 992px){
+    .sidebar{
+        height: auto;
+    }
 }

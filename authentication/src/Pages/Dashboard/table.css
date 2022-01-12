@@ -1,0 +1,24 @@
+.Text{
+    text-align: center;
+}
+.Table{
+    height: auto;
+    width: 75%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 0px) and (max-width : 576px){
+    .Table{
+        width: 100%;
+        height: auto;
+        margin: 0 30px;
+        /* font-size: 1rem; */
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width : 992px){
+    .Table{
+        width: 100%;
+        height: auto;
+        margin: 10px 70px;
+    }
+}

@@ -49,7 +49,7 @@ const Cart = () => {
     return (
         <div>
             <button
-                className="btn btn-outline-success mx-3"
+                className="btn btn-outline-light text-dark  mx-3"
                 onClick={handleOpen}
             >
                 <AddShoppingCart />
@@ -57,6 +57,7 @@ const Cart = () => {
                     <strong>{cartitem.length}</strong>
                 </span>
             </button>
+            
             <Drawer
                 open={open}
                 onClose={handleClose}

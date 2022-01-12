@@ -31,9 +31,6 @@ const filterRobots = robotdata && robotdata.filter((item) =>
 
     return (
         <>
-        <div className="text-center mt-3">
-         <Cart/>
-        </div>
          <div className="row mt-3">
          <Filter length={length} handleChange={handleChange} />
          </div>   
