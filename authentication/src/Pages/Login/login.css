@@ -24,5 +24,12 @@
     flex-direction: column;
     margin-bottom: 10px;
   }
+  .form{
+    border: 1px solid grey;
+    border-radius:20px; 
+  }
+  .form input {
+    border: 0;
+  }
 
   
