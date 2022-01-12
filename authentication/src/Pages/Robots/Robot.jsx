@@ -12,7 +12,7 @@ useEffect(()=>{
     dispatch(getAllRobots());
 },[Robot])
 const robotdata = useSelector(state => state.robots.data);
-console.log(robotdata);
+// console.log(robotdata);
 const [allrobots, setAllrobots] = useState([]);
 const filterRobots = robotdata && robotdata.filter((item) =>
         item.createdAt = moment(item.createdAt).format("DD/MM/YYYY")

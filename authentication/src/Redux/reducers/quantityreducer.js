@@ -1,5 +1,12 @@
-const initialstate = [];
-
+const initialstate  =[ {
+    name : "",
+    image : "",
+    material : "",
+    price : "",
+    stock : "",
+    createdAt : "",
+    quantity:0
+}];
 const quantityreducer = (state = initialstate, action) => {
     if (action.type === "IncreaseQuantity") {
         console.log(state)
@@ -8,7 +15,7 @@ const quantityreducer = (state = initialstate, action) => {
         state = [...state, action.payload]
         const itemname = state.map(item=> item.name)   
         console.log(itemname);
-        console.log(state);
+        console.log("quaintity>>>>",state);
         return state
     }
     else if (action.type === "DecreaseQuantity") {

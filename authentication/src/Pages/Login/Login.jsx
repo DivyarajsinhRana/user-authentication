@@ -33,7 +33,7 @@ const Login = () => {
                 {
                     errorMessage ? <p className="error">{errorMessage}</p> : null
                 }
-                <div className='form'>
+                <div className='form1'>
                 <form>
                     <div className="form-group">
                         <label for="exampleInputEmail1">Username</label>
