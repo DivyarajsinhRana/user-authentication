@@ -6,13 +6,11 @@ import { AuthProvider, logout, useAuthDispatch, useAuthState } from "./Context"
 import About from "./Pages/About/About"
 import Dashboard from "./Pages/Dashboard/Dashboard"
 import DashboardContent from "./Pages/Dashboard/DashboardContent"
-
-
 import Login from "./Pages/Login/Login"
 import Navbar from "./Pages/Navbar"
-
 import PageNotFound from "./Pages/NotFound/PageNotFound"
 import Profile from "./Pages/Profile/Profile"
+import Robot from "./Pages/Robots/Robot"
 import Sidebar from "./Pages/Sidebar/Sidebar"
 
 const App = () => {
@@ -32,13 +30,14 @@ const App = () => {
             <Routes>
           <Route path="Profile" element={<Profile/>}/>
           <Route path="About" element={<About/>}/>
+          <Route path="Robots" element={<Robot/>}/>
           <Route path="" element={<DashboardContent/>}/>
             </Routes>
             </Dashboard>
         </AppRoutes>
       } 
       >
-         {/* <Route path="/*" element={<AppRoutes isPrivate={true}>
+      {/* <Route path="/*" element={<AppRoutes isPrivate={true}>
         <PageNotFound />
       </AppRoutes>} /> */}
         </Route>

@@ -1,4 +1,4 @@
-import { Dashboard, DescriptionOutlined, People, PeopleAltOutlined } from '@material-ui/icons'
+import { Dashboard, DescriptionOutlined, People, PeopleAltOutlined, ToysOutlined } from '@material-ui/icons'
 import { Link, Route, Routes } from 'react-router-dom'
 import About from '../About/About'
 import Profile from '../Profile/Profile'
@@ -11,6 +11,7 @@ const Sidebar = ({data}) => {
                    <li  className="pt-5 " ><Link to="/dashboard" className="link"><Dashboard/>  Dashboard</Link></li>
                    <li  className="pt-5 "><Link to="Profile" className="link"><PeopleAltOutlined/> Profile</Link></li>
                    <li  className="pt-5 "><Link to="About" className="link"><DescriptionOutlined/>   About</Link></li>
+                   <li  className="pt-5 "><Link to="Robots" className="link"><ToysOutlined/>   Robots</Link></li>
                </ul>
         </div>
          
