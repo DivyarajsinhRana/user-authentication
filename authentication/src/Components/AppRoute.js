@@ -6,7 +6,7 @@ import { useAuthState } from '../Context'
    
   
 const AppRoutes = ({ children,isPrivate }) => {
-    const userDetails = useAuthState()
+    // const userDetails = useAuthState()
     
     if (isPrivate && !localStorage.getItem("currentUser")) {
       // Redirect them to the /login page, but save the current location they were

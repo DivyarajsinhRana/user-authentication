@@ -5,7 +5,7 @@ const initialstate  =[ {
     price : "",
     stock : "",
     createdAt : "",
-    quantity:0
+    quantity:null
 }];
 const quantityreducer = (state = initialstate, action) => {
     if (action.type === "IncreaseQuantity") {
